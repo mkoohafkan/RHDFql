@@ -1,0 +1,25 @@
+Package: RHDFql
+Title: Interface to 'HDFql'
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Michael",
+           family = "Koohafkan",
+           role = c("aut", "cre"),
+           email = "michael.koohafkan@gmail.com")
+Description: A DBI-like interface to HDF files using HDFql.
+imports:
+  DBI (>= 0.3.0),
+  methods
+Suggests:
+  DBItest, testthat
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2
+Collate: 
+    'RHDFql.R'
+    'Driver.R'
+    'Connection.R'
+    'Result.R'
+    'libconnect.R'
+    'zzz.R'
