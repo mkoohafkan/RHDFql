@@ -1,0 +1,22 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r}
+devtools::document()
+
+drv = dbDriver("HDFql")
+con = dbConnect(drv, "C:/RAS/HEC Data/Example Data/2D Unsteady Flow Hydraulics/BaldEagleCrkMulti2D/BaldEagleDamBrk.g06.hdf")
+res = dbSendQuery(con, "SELECT FROM \"Geometry/2D Flow Areas/193/Perimeter\"")
+
+dbFetch(res)
+
+
+res2 = dbSendQuery(con, "SHOW DIMENSION \"Geometry/2D Flow Areas/193/Perimeter\"")
+dbFetch(res2)
+
+
+dbColumnInfo(res)
+
+```
